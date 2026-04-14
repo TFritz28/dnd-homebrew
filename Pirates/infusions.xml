@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Infusions</name>
+		<description>Infusions from the Pirates campaign</description>
+		<update version="0.0.1">
+			<file name="infusions.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/infusions.xml" />
+		</update>
+	</info>
+	
+	<!-- Infused Shield -->
+	<element name="Shield Infusion" type="Feat" source="Pirates" id="ID_PIRATES_FEATS_SHIELD_INFUSION">
+		<description></description>
+		<sheet display="false" />
+		<rules>
+			<!--<select type="Feat Feature" name="Passive Infusion (Infused Shield)" supports="Passive Aether Infusion" /> -->
+			<select type="Feat Feature" name="Active Infusion (Infused Shield)" supports="Active Infusion" />
+			<select type="Feat Feature" name="Artificer Infusion (Infused Shield)" supports="Artificer Infusion Shield" />
+		</rules>
+	</element>
+	
+	<!-- Infused Armor -->	
+	<element name="Armor Infusion" type="Feat" source="Pirates" id="ID_PIRATES_FEATS_ARMOR_INFUSION">
+		<description></description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Grants" id="ID_GRANTS_INFUSED_ARMOR_EQUIPPED" />
+			<select type="Feat Feature" name="Passive Infusion (Infused Armor)" supports="Passive Aether Infusion" />
+			<select type="Feat Feature" name="Active Infusion (Infused Armor)" supports="Active Infusion" />
+			<select type="Feat Feature" name="Artificer Infusion (Infused Armor)" supports="Artificer Infusion Armor" />
+		</rules>
+	</element>
+	
+	<!--Artificer Infusions -->
+	<element name="Enhanced Defense" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_ENHANCED_DEFENSE" >
+		<supports>Artificer Infusion Armor, Artificer Infusion Shield</supports>
+		<description></description>
+		<sheet display="false"/>
+		<rules>
+			<stat name="ac:misc" value="1" requirements="ID_GRANTS_INFUSED_ARMOR_EQUIPPED" />
+			<stat name="ac:misc" value="1" level="10" requirements="ID_GRANTS_INFUSED_ARMOR_EQUIPPED" />
+		</rules>
+	</element>
+	
+	<element name="Resistant Armor" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_RESISTANT_ARMOR" >
+		<supports>Artificer Infusion Armor</supports>
+		<description></description>
+		<sheet display="false"/>
+		<rules>
+			<grant type="Feat" id="ID_PIRATES_FEATS_ARMOR_OF_RESISTANCE" />
+		</rules>
+	</element>
+	<element name="Resistant Armor" type="Feat" source="Pirates" id="ID_PIRATES_FEATS_ARMOR_OF_RESISTANCE">
+		<description></description>
+		<sheet>
+			<description>
+			While having this armor equipped you gain resistance to the following damage types:
+			</description>
+		</sheet>
+		<rules>
+			<select name="Resistance (Resistant Armor)" type="Feat Feature" supports="Armor of Resistance"/>
+			<stat name="attunement:current" value="1" bonus="enhancement" />
+		</rules>
+	</element>
+	<element name="Radiant" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_RADIANT_RESISTANCE" >
+		<supports>Armor of Resistance</supports>
+		<description></description>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_RADIANT" requirements="ID_GRANTS_INFUSED_ARMOR_EQUIPPED"/>
+		</rules>
+	</element>
+	<element name="Lightning" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_LIGHTNING_RESISTANCE" >
+		<supports>Armor of Resistance</supports>
+		<description></description>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" requirements="ID_GRANTS_INFUSED_ARMOR_EQUIPPED"/>
+		</rules>
+	</element>
+	<element name="Acid" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_ACID_RESISTANCE" >
+		<supports>Armor of Resistance</supports>
+		<description></description>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" requirements="ID_GRANTS_INFUSED_ARMOR_EQUIPPED"/>
+		</rules>
+	</element>
+	<element name="Cold" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_COLD_RESISTANCE" >
+		<supports>Armor of Resistance</supports>
+		<description></description>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" requirements="ID_GRANTS_INFUSED_ARMOR_EQUIPPED"/>
+		</rules>
+	</element>
+	<element name="Fire" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_FIRE_RESISTANCE" >
+		<supports>Armor of Resistance</supports>
+		<description></description>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" requirements="ID_GRANTS_INFUSED_ARMOR_EQUIPPED"/>
+		</rules>
+	</element>
+	<element name="Force" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_FORCE_RESISTANCE" >
+		<supports>Armor of Resistance</supports>
+		<description></description>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FORCE" requirements="ID_GRANTS_INFUSED_ARMOR_EQUIPPED"/>
+		</rules>
+	</element>
+	<element name="Necrotic" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_NECROTIC_RESISTANCE" >
+		<supports>Armor of Resistance</supports>
+		<description></description>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" requirements="ID_GRANTS_INFUSED_ARMOR_EQUIPPED"/>
+		</rules>
+	</element>
+	<element name="Poison" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_POISON_RESISTANCE" >
+		<supports>Armor of Resistance</supports>
+		<description></description>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" requirements="ID_GRANTS_INFUSED_ARMOR_EQUIPPED"/>
+		</rules>
+	</element>
+	<element name="Psychic" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_PSYCHIC_RESISTANCE" >
+		<supports>Armor of Resistance</supports>
+		<description></description>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC" requirements="ID_GRANTS_INFUSED_ARMOR_EQUIPPED"/>
+		</rules>
+	</element>
+	<element name="Thunder" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_THUNDER_RESISTANCE" >
+		<supports>Armor of Resistance</supports>
+		<description></description>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_THUNDER" requirements="ID_GRANTS_INFUSED_ARMOR_EQUIPPED"/>
+		</rules>
+	</element>
+	
+	<!-- Passive Infusions -->
+	<element name="Aether Reinforcement" type="Feat Feature" source="Pirates" id="ID_PIRATES_GRANTS_AETHER_REINFORCEMENT" >
+		<supports>Passive Aether Infusion</supports>
+		<description></description>
+		<sheet display="false"/>
+		<rules>
+			<stat name="ac:misc" value="1" requirements="ID_GRANTS_INFUSED_ARMOR_EQUIPPED"/>
+		</rules>
+	</element>
+	<element name="Dimensional Cushioning" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_DIMENSIONAL_CUSHIONING" >
+		<supports>Passive Aether Infusion</supports>
+		<description>You gain Resistance to falling damage and advantage on DEX saves to avoid area effects (explosions, traps, etc.).</description>
+		<sheet>
+			<description>
+			You gain Resistance to falling damage and advantage on DEX saves to avoid area effects (explosions, traps, etc.).
+			</description>
+		</sheet>
+	</element>
+	<element name="Aetheric Vitality" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_AETHERIC_VITALITY" >
+		<supports>Passive Aether Infusion</supports>
+		<description>While wearing this armor, you recover +1 extra HP whenever you roll Hit Dice during a Short Rest.</description>
+		<sheet>
+			<description>
+			While wearing this armor, you recover +1 extra HP whenever you roll Hit Dice during a Short Rest.
+			</description>
+		</sheet>
+	</element>
+	
+	<!-- Active Infusions -->
+	<element name="Phase Barrier Armor" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_PHASE_BARRIER_ARMOR">
+		<supports>Active Infusion</supports>
+		<description>As a Reaction to taking damage, reduce that damage by 1d8, as your form partially phases out of sync with the world for an instant. You can use this reaction once per Short Rest.</description>
+		<sheet action="Reaction" usage="1/Short Rest">
+			<description>
+				As a Reaction to taking damage, reduce that damage by 1d8, as your form partially phases out of sync with the world for an instant. You can use this reaction once per Short Rest.
+			</description>
+		</sheet>
+	</element>
+	<element name="Aether Step" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_AETHER_STEP">
+		<supports>Active Infusion</supports>
+		<description>Once per Short Rest, as a Bonus Action, you can teleport up to 15 ft to a space you can see, leaving behind a faint arcane shimmer.</description>
+		<sheet action="Bonus Action" usage="1/Short Rest">
+			<description>
+				As a bonus action, you can teleport up to 15 ft to a space you can see.
+			</description>
+		</sheet>
+	</element>
+	<element name="Pulse Discharge" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_PULSE_DISCHARGE">
+		<supports>Active Infusion</supports>
+		<description>When you are hit by a melee attack, you can trigger an Aether pulse — the attacker must succeed a DC 13 STR save or be pushed 10 ft away.</description>
+		<sheet action="Reaction" usage="1/Short Rest">
+			<description>
+				When you are hit by a melee attack, you can trigger an Aether pulse — the attacker must succeed a DC 13 STR save or be pushed 10 ft away.
+			</description>
+		</sheet>
+	</element>
+	<element name="Crystal Shield" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_CRYSTAL_SHIELD">
+		<supports>Active Infusion</supports>
+		<description>You can cast the Shield spell once per Short Rest without expending a spell slot. For each additional item that is infused with this effect, you can cast Shield one more time per Short Rest.</description>
+		<sheet action="Reaction" usage="{{crystal shield:uses}}/Short Rest">
+			<description>
+				You can cast the Shield spell without expending a spell slot.
+			</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_SHIELD" />
+			<stat name="crystal shield:uses" value="1" />
+		</rules>
+			
+	</element>
+	
+	<element name="Crystal Shield" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_CRYSTAL_SHIELD_DUAL">
+		<supports>Active Infusion</supports>
+		<requirements>ID_PIRATES_FEAT_FEATURE_CRYSTAL_SHIELD</requirements>
+		<description>You can cast the Shield spell without expending a spell slot.</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="crystal shield:uses" value="1" />
+		</rules>
+			
+	</element>
+</elements>

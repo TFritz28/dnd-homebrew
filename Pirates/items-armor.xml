@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Armor</name>
+		<description>Various Armors from the Pirates campaign</description>
+		<update version="0.0.1">
+			<file name="items-armor.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/items-armor.xml" />
+		</update>
+	</info>
+
+	<element name="Infused Shield" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_INFUSED_SHIELD">
+		<description>
+			<p>This shield can have several infusions</p>
+		</description>
+		<setters>
+			<set name="category">Magic Armor</set>
+			<set name="slot">body</set>
+			<set name="type" addition="shield">Armor</set>
+			<set name="rarity">Infusion</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
+			<set name="name-format">Infused {{parent}}</set>
+		</setters>
+		<rules>
+			<grant type="Grants" id="ID_GRANTS_INFUSED_ARMOR_EQUIPPED" />
+			<grant type="Feat" id="ID_PIRATES_FEATS_SHIELD_INFUSION" />
+		</rules>
+	</element>
+
+	<element name="Infused Armor" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_INFUSED_ARMOR">
+		<description>
+			<p>This non-magical armor has two embeddings for magical crystals. Placing a magical crystal into the armor's embeddings causes it to gain the crystal's magical effects.</p>
+		</description>
+		<setters>
+			<set name="category">Magic Armor</set>
+			<set name="slot">body</set>
+			<set name="type" addition="light, medium, or heavy">Armor</set>
+			<set name="rarity">Infusion</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_LIGHT|ID_INTERNAL_ARMOR_GROUP_MEDIUM|ID_INTERNAL_ARMOR_GROUP_HEAVY</set>
+			<set name="name-format">Infused {{parent}}</set>
+		</setters>
+		<rules>
+			<grant type="Feat" id="ID_PIRATES_FEATS_ARMOR_INFUSION" />
+		</rules>
+	</element>
+	<element name="Infused Armor Equipped" type="Grants" source="Pirates" id="ID_GRANTS_INFUSED_ARMOR_EQUIPPED" />
+
+	<!-- Pelt of the Pack Lord -->
+	<element name="Pelt of the Pack Lord" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_PELT_OF_THE_PACK_LEADER">
+		<description>
+			<p></p>
+		</description>
+		<setters>
+			<set name="category">Magic Armor</set>
+			<set name="slot">body</set>
+			<set name="type" addition="light, medium, or heavy">Armor</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_LIGHT|ID_INTERNAL_ARMOR_GROUP_MEDIUM|ID_INTERNAL_ARMOR_GROUP_HEAVY</set>
+			<set name="name-format">Pelt of the Pack Lord ({{parent}})</set>
+		</setters>
+	</element>
+
+	<element name="Hazewalker Armor" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_HAZEWALKER_ARMOR">
+		<description>
+			<p>This plate armor includes a helmet and is hermetically sealed when worn. You gain the following benefits when you wear it and the helmet visor is closed. It can be added as an upgrade to any armor:</p>
+			<ul>
+				<li>+1 to AC when active.</li>
+				<li>You are immune to disease and the Poisoned condition and have Advantage on saving throws against all effects that cause Contamination.</li>
+				<li>You have Resistance to Necrotic and Poison damage.</li>
+				<li>You don't need to breathe.</li>
+			</ul>
+			<p>The armor needs to be constantly fueled by Aether-Crystals. The bigger the Crystal, the longer the effect:</p>
+			<table>
+				<thead>
+					<tr>
+						<td>Size</td>
+						<td>Effect Length</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Shard</td>
+						<td>8 hours</td>
+					</tr>
+					<tr>
+						<td>Crystal</td>
+						<td>1 day</td>
+					</tr>
+					<tr>
+						<td>Geode</td>
+						<td>1 week</td>
+					</tr>
+					<tr>
+						<td>Cluster</td>
+						<td>1 year</td>
+					</tr>
+				</tbody>
+			</table>
+		</description>
+		<setters>
+			<set name="category">Magic Armor</set>
+			<set name="weight" lb="0">-</set>
+			<set name="slot">body</set>
+			<set name="type" addition="light, medium, or heavy">Armor</set>
+			<set name="rarity">Very Rare</set>
+			<set name="attunement">true</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_LIGHT|ID_INTERNAL_ARMOR_GROUP_MEDIUM|ID_INTERNAL_ARMOR_GROUP_HEAVY</set>
+			<set name="name-format">Hazewalker {{parent}}</set>
+		</setters>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_NECROTIC" requirements="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC"/>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_POISON" requirements="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON"/>
+
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" requirements="!ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_NECROTIC"/>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" requirements="!ID_INTERNAL_CONDITION_DAMAGE_IMMUNITY_POISON"/>
+
+			<grant type="Grants" id="ID_GRANTS_INFUSED_ARMOR_EQUIPPED"/>
+			<stat name="ac:armored:enhancement" value="1" bonus="enhancement" />
+		</rules>
+	</element>
+
+	<element name="Grudgeglass Enhancement (Shield)" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_ENVY_CRYSTAL_SHIELD">
+		<description>
+			<p>This item has a green crystal embedded within it that contains magical energy.</p>
+			<p>
+				While having this armor or shield equipped, you can cast the Shield spell once per short rest.
+				This magic is inherent to the crystal embedded in the item, so it doesn't require you to use a spell slot and you do not gain the ability to cast this spell outside of using this item.
+				When casting this spell, you only need the somatic component, which consists of tapping the embedded crystal twice.
+			</p>
+		</description>
+		<setters>
+			<set name="category">Magic Armor</set>
+			<set name="type" addition="light, medium, heavy, or shield">Armor</set>
+			<set name="rarity">Uncommon</set>
+			<set name="attunement">false</set>
+			<set name="armor">ID_INTERNAL_ARMOR_GROUP_LIGHT|ID_INTERNAL_ARMOR_GROUP_MEDIUM|ID_INTERNAL_ARMOR_GROUP_HEAVY|ID_INTERNAL_ARMOR_GROUP_SHIELD</set>
+			<set name="name-format">{{parent}} (Crystal Shield)</set>
+		</setters>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_SHIELD" prepared="false" />
+		</rules>
+	</element>
+</elements>

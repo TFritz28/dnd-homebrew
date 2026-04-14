@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Weapons</name>
+		<description>Weapons from the Pirates campaign</description>
+		<update version="0.0.1">
+			<file name="items-weapons.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/items-weapons.xml" />
+		</update>
+	</info>
+
+	<!-- Schweres Maschinengewehr -->
+	<element name="Schw. Maschinengewehr" type="Weapon" source="Pirates" id="ID_PIRATES_WEAPON_RAILGUN">
+		<supports>ID_INTERNAL_WEAPON_CATEGORY_FIREARM, ID_INTERNAL_DAMAGE_TYPE_PIERCING, ID_WOTC_DMG_WEAPON_PROPERTY_FIREARM_AMMUNITION, ID_INTERNAL_WEAPON_PROPERTY_LOADING, ID_INTERNAL_WEAPON_PROPERTY_TWOHANDED, ID_CRIT_WEAPON_PROPERTY_MISFIRE_1, ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED</supports>
+		<description>
+			<p>This heavy machine gun was originally manufactured by the weapon smiths in Verdigrath and then repaired and enhanced by Benjamin B. Crowley. It features a barrel encased in a cylindrical metal tube (barrel jacket) containing cooling water and a small belt feeder design. The handle and cover feature crystal-shaped embeddings.</p>
+			<p class="indent">
+				<b>Mounting.</b> Because of it's weight, the machine gun is usually placed on a special gun mount, but it can also be carried.
+			</p>
+			<p class="indent">
+				<b>Attack.</b> The gun can fire 3 shots per attack (one "shot" being a burst fire of 3 rounds). These shots can be fired at either one target or up to 3, however, switching target within one attack will cause all shots fired at a different target to be done at disadvantage.
+			</p>
+		</description>
+		<setters>
+			<set name="category">Weapons</set>
+			<set name="cost" currency="gp">100</set>
+			<set name="weight" lb="10">10 lb.</set>
+			<set name="slot">twohand</set>
+			<set name="range">150/500</set>
+			<set name="damage" type="piercing">2d6</set>
+			<set name="proficiency">ID_PIRATES_PROFICIENCY_RAILGUN</set>
+			<!-- <set name="ammunition">ID_WOTC_DMG_ITEM_BULLET</set> -->
+		</setters>
+	</element>
+	<element name="Weapon Proficiency (Firearms)" type="Proficiency" source="Pirates" id="ID_PIRATES_PROFICIENCY_RAILGUN">
+		<supports>Weapon, Martial, Ranged, Firearm, ID_INTERNAL_WEAPON_CATEGORY_FIREARM, ID_INTERNAL_DAMAGE_TYPE_PIERCING, ID_WOTC_DMG_WEAPON_PROPERTY_FIREARM_AMMUNITION, ID_INTERNAL_WEAPON_PROPERTY_LOADING, ID_INTERNAL_WEAPON_PROPERTY_TWOHANDED</supports>
+		<requirements>ID_WOTC_DMG_OPTION_FIREARMS</requirements>
+	</element>
+
+	<append id="ID_WOTC_DMG_PROFICIENCY_WEAPON_FIREARMS">
+		<rules>
+			<grant type="Proficiency" id="ID_PIRATES_PROFICIENCY_RAILGUN" requirements="ID_WOTC_DMG_OPTION_FIREARMS" />
+		</rules>
+	</append>
+
+	<!-- Sacrificial Dagger -->
+	<element name="Sacrificial Dagger" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_SACRIFICIAL_DAGGER">
+		<description>
+			<p>You have a +1 bonus to attack and damage rolls made with this magic weapon.</p>
+			<p>
+				This dagger has 6 charges and it regains 1d6 charges every Long Rest. If you use this dagger to reduce a creature to 0 hit points, you can expend one of it's charges to gain the following properties for the next hour:
+				<ul>
+					<li>This dagger deals an extra 1d4 cold damage on a hit</li>
+					<li>You gain a swimming speed of 20ft.</li>
+					<li>You can breathe underwater.</li>
+				</ul>
+			</p>
+		</description>
+		<setters>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type">Weapon</set>
+			<set name="rarity">Rare</set>
+			<set name="enhancement">1</set>
+			<set name="weapon">Dagger</set>
+		</setters>
+	</element>
+
+	<!-- Weapon Infusions -->
+	<element name="Aether Edge" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_INFUSED_AETHER_EDGE">
+		<description>
+			<p>The weapon hums with resonant energy, granting +1 to attack and damage rolls. Each strike leaves faint silver trails that vanish a heartbeat later.</p>
+		</description>
+		<setters>
+			<set name="keywords">infusion</set>
+			<set name="category">Magic Weapons</set>
+			<set name="type" addition="simple or martial weapon">Weapon</set>
+			<set name="rarity">Aether Infusion (Uncommon)</set>
+			<set name="enhancement">1</set>
+			<set name="attunement">false</set>
+			<set name="weapon">(ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED) || ID_INTERNAL_WEAPON_CATEGORY_FIREARM</set>
+			<set name="name-format">{{parent}} +{{enhancement}} (Aether Edge)</set>
+		</setters>
+	</element>
+
+	<element name="Aether Attunement" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_INFUSED_AETHER_ATTUNEMENT">
+		<description>
+			<p>The weapon faintly vibrates when within 30 ft of an active magical field or portal.</p>
+		</description>
+		<setters>
+			<set name="keywords">infusion</set>
+			<set name="category">Magic Weapons</set>
+			<set name="type" addition="simple or martial weapon">Weapon</set>
+			<set name="rarity">Aether Infusion (Uncommon)</set>
+			<set name="attunement">false</set>
+			<set name="weapon">(ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED) || ID_INTERNAL_WEAPON_CATEGORY_FIREARM</set>
+			<set name="name-format">{{parent}} (Aether Attunement)</set>
+		</setters>
+	</element>
+
+	<element name="Repeating Shot, Aether Edge" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_INFUSED_REPEATING_SHOT_AETHER_EDGE">
+		<description>
+			<p>The weapon hums with resonant energy, granting +2 to attack and damage rolls and when it’s used to make a ranged attack, it ignores the loading property if it has it. Each strike leaves faint silver trails that vanish a heartbeat later.</p>
+			<p>The weapon requires no ammunition; it magically produces one piece of ammunition each time you make a ranged attack with it, unless you manually load it. The ammunition produced by the weapon vanishes the instant after it hits or misses a target.</p>
+		</description>
+		<setters>
+			<set name="keywords">artificer, infusion</set>
+			<set name="category">Magic Weapons</set>
+			<set name="type" addition="simple or martial weapon">Weapon</set>
+			<set name="rarity">Infusion</set>
+			<set name="enhancement">2</set>
+			<set name="attunement">true</set>
+			<set name="weapon">ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED ||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED || ID_INTERNAL_WEAPON_CATEGORY_FIREARM</set>
+			<set name="name-format">{{parent}} +{{enhancement}} (Repeating Shot, Aether Edge)</set>
+		</setters>
+	</element>
+
+	<element name="Grudgeglass Enhancement (Tracking)" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_ENVY_CRYSTAL_TRACKING">
+		<description>
+			<p>This item has a green crystal embedded within it that contains magical energy. Hitting a creature with an attack using this weapon allows you to keep track of it's location. </p>
+			<p>The distance the tracked creature has to the crystal determines the precision with which the location can be tracked. If the tracked creature is far enough away, only the rough direction of it can be tracked through the crystal. The crystal cannot track creatures on a different plane of existence.</p>
+		</description>
+		<setters>
+			<set name="keywords">infusion</set>
+			<set name="category">Magic Weapons</set>
+			<set name="type" addition="simple or martial weapon">Weapon</set>
+			<set name="rarity">Uncommon</set>
+			<set name="attunement">false</set>
+			<set name="weapon">(ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_MELEE||ID_INTERNAL_WEAPON_CATEGORY_SIMPLE_RANGED||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_MELEE||ID_INTERNAL_WEAPON_CATEGORY_MARTIAL_RANGED) || ID_INTERNAL_WEAPON_CATEGORY_FIREARM</set>
+			<set name="name-format">{{parent}} (Crystal Tracking)</set>
+		</setters>
+		<rules>
+			<grant type="Grant" id="ID_PIRATES_GRANTS_HUNTERS_MARK" />
+		</rules>
+	</element>
+	<element name="Crystal Hunter's Mark" type="Grants" source="Pirates" id="ID_PIRATES_GRANTS_HUNTERS_MARK">
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_HUNTERS_MARK" prepared="true" />
+		</rules>
+	</element>
+</elements>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Misc</name>
+		<description>Miscellaneous stuff from the Pirates campaign</description>
+		<update version="0.0.1">
+			<file name="misc.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/misc.xml" />
+		</update>
+	</info>
+	
+	<!--Coinmonger Spells-->
+	<append id="ID_DMSG_EHP_ARCHETYPE_FEATURE_COINMONGER_OTHERWORLDLY_WEALTH">
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_CURE_WOUNDS"/>
+			<grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON"/>
+			<grant type="Spell" id="ID_PHB_SPELL_ALARM"/>
+			<grant type="Spell" id="ID_PHB_SPELL_BLESS"/>
+			<grant type="Spell" id="ID_PHB_SPELL_FALSE_LIFE"/>
+			<grant type="Spell" id="ID_PHB_SPELL_FIND_FAMILIAR"/>
+			<grant type="Spell" id="ID_PHB_SPELL_UNSEEN_SERVANT"/>
+		</rules>
+	</append>
+</elements>

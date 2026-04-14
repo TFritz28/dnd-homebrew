@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Wondrous Items</name>
+		<description>Wondrous Items from the Pirates campaign</description>
+		<update version="0.0.1">
+			<file name="items-wondrous.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/items-wondrous.xml" />
+		</update>
+	</info>
+
+	<!-- Amulet of Incineration -->
+	<element name="Amulet of Incineration" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_AMULET_OF_INCINERATION">
+		<description>
+			<p>Crafted out of a gem consisting of the elemental dust of an entropic flame, encased in an amulet made from bones and glazed with the blood of an aberration, this amulet shines with an eternal flame.</p>
+			<p>Once per turn, if you cast a spell (that uses a spell slot) that deals fire damage, you can choose a creature hit by the spell. That creature is inflicted with the Burning condition, causing it to take an extra 3d6 fire damage every turn (doesn't stack).</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">750</set>
+			<set name="weight" lb="0">0 lb.</set>
+			<set name="slot">neck</set>
+			<set name="type">Wondrous Item</set>
+			<set name="attunement">false</set>
+			<set name="rarity">Rare</set>
+		</setters>
+	</element>
+
+	<element name="Aether Detecting Glasses" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_AETHER_DETECTING_GLASSES">
+		<description>
+			<p>Looking through these glasses allows you to see magical auras of Aether energy. If an object has an Aether signature, it will glow in a bright purple. The amount of Aether energy within the object determines the brightness and size of the aura.</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Common</set>
+			<set name="slot">head</set>
+		</setters>
+	</element>
+
+	<!-- Rage Potion -->
+	<element name="Rage Potion" type="Magic Item" source="Pirates" id="ID_PIRATES_POTION_RAGE_POTION">
+		<description>
+			<p>This potion was brewed by the fiendish attackers of Verdigrath. Drinking this potions causes you to enter a Barbarian's rage for 10 minutes.</p>
+		</description>
+		<setters>
+			<set name="category">Potions</set>
+			<set name="weight" lb="0.5">½ lb.</set>
+			<set name="type">Potion</set>
+			<set name="cost" currency="gp">50</set>
+			<set name="rarity">Common</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+	<!-- Invisibility Cupcakes -->
+	<element name="Invisibility Cupcake" type="Magic Item" source="Pirates" id="ID_PIRATES_INVISIBILITY_CUPCAKE">
+		<description>
+			<p>These cupcakes were the reward for winning the eating competition in the Witchlight Carnival. Upon eating a cupcake, you gain the effects of the Invisibility spell for 1 hour, without requiring concentration.</p>
+			<div element="ID_PHB_SPELL_INVISIBILITY" />
+		</description>
+		<setters>
+			<set name="category">Potions</set>
+			<set name="type">Potion</set>
+			<set name="rarity">Uncommon</set>
+			<set name="stackable">true</set>
+		</setters>
+	</element>
+	<!-- Zepter -->
+	<element name="Sceptre of Saint Adrenna" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_SCEPTRE_OF_SAINT_ADRENNA">
+		<description>
+			<p>This scepter is made of a golden material. At its tip rests a pulsating, deep-red crystal that constantly distorts the air due to its enormous concentration of magical radiation. Both its origin and the materials it is made of are unknown. The only clues are the fact that it was found in the tomb of Saint Adrenna and that reliefs of her holding the scepter can be found in Rabstadt Cathedral.</p>
+			<p>While you are attuned to this scepter, you gain a +3 bonus to spell attack rolls and your spell save DC. Your walking speed increases by 10 ft., and you ignore difficult terrain.</p>
+			<p>This magical artifact has 20 charges and it regains 2d8 + 4 charges after a long rest. While wielding the Sceptre, you can use an Action to cast one of the following spells (using your spell save DC):</p>
+			<p>
+				Misty Step (<i>1 charge</i>), Banishment (<i>3 charges</i>), Telekinesis (<i>5 charges</i>), Reverse Gravity (<i>5 charges</i>), Teleport (<i>6 charges</i>), Plane Shift (<i>9 charges</i>), Black Hole (<i>15 charges</i>)
+			</p>
+		</description>
+		<setters>
+			<set name="category">Rods</set>
+			<set name="type">Rod</set>
+			<set name="rarity">Legendary</set>
+			<set name="attunement">true</set>
+			<set name="slot">onehand</set>
+		</setters>
+		<rules>
+			<stat name="speed" value="10"/>
+			<stat name="spellcasting:attack" value="3" />
+			<stat name="spellcasting:dc" value="3" />
+
+			<grant type="Spell" id="ID_PHB_SPELL_MISTY_STEP"/>
+			<grant type="Spell" id="ID_PHB_SPELL_BANISHMENT"/>
+			<grant type="Spell" id="ID_PHB_SPELL_TELEKINESIS"/>
+			<grant type="Spell" id="ID_PHB_SPELL_REVERSE_GRAVITY"/>
+			<grant type="Spell" id="ID_PHB_SPELL_TELEPORT"/>
+			<grant type="Spell" id="ID_PHB_SPELL_PLANE_SHIFT"/>
+			<grant type="Spell" id="ID_DEEP_MAGIC_SPELL_BLACK_HOLE"/>
+		</rules>
+	</element>
+	
+</elements>

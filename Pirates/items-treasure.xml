@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Treasure</name>
+		<description>Treasure from the Pirates campaign</description>
+		<update version="0.0.1">
+			<file name="items-treasure.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/items-treasure.xml" />
+		</update>
+	</info>
+
+	<element name="Aether Crystal (Shard)" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_AETHER_SHARD">
+		<description>
+			<p>A magical crystal infused with the energy of the aether that comes in 4 different sizes. </p>
+			<p>This crystal is a small purple shard that can be combined with a glyph band and 2 hours of work to infuse weapons or armor with minor passive effects or stat increases.</p>
+		</description>
+		<setters>
+			<set name="keywords">crystal</set>
+			<set name="category">Treasure</set>
+			<set name="cost" currency="gp">500</set>
+			<set name="rarity">Uncommon</set>
+			<set name="stackable">true</set>
+			<set name="valuable">true</set>
+		</setters>
+	</element>
+	<element name="Aether Crystal (Crystal)" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_AETHER_CRYSTAL">
+		<description>
+			<p>A magical crystal infused with the energy of the aether that comes in 4 different sizes. </p>
+			<p>This purple crystal can be combined with a glyph band and 1 day of work to infuse weapons or armor with active skills or major stat increases.</p>
+		</description>
+		<setters>
+			<set name="keywords">crystal</set>
+			<set name="category">Treasure</set>
+			<set name="cost" currency="gp">1000</set>
+			<set name="rarity">Rare</set>
+			<set name="stackable">true</set>
+			<set name="valuable">true</set>
+		</setters>
+	</element>
+	<element name="Aether Crystal (Geode)" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_AETHER_GEODE">
+		<description>
+			<p>A magical crystal infused with the energy of the aether that comes in 4 different sizes. </p>
+			<p>This Geode can be combined with a glyph band and 3 days of work to infuse weapons or armor with powerful auras or once-per-day spell effects.</p>
+		</description>
+		<setters>
+			<set name="keywords">crystal</set>
+			<set name="category">Treasure</set>
+			<set name="cost" currency="gp">5000</set>
+			<set name="rarity">Very Rare</set>
+			<set name="stackable">true</set>
+			<set name="valuable">true</set>
+		</setters>
+	</element>
+	<element name="Aether Crystal (Massive Cluster)" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_MASSIVE_AETHER_CLUSTER">
+		<description>
+			<p>A magical crystal infused with the energy of the aether that comes in 4 different sizes. </p>
+			<p>This is a massive crystal cluster that can be combined with a glyph band and 7 days of work to infuse weapons or armor with reality bending powers.</p>
+		</description>
+		<setters>
+			<set name="keywords">crystal</set>
+			<set name="category">Treasure</set>
+			<set name="cost" currency="gp">100000</set>
+			<set name="rarity">Legendary</set>
+			<set name="stackable">true</set>
+			<set name="valuable">true</set>
+		</setters>
+	</element>
+
+	<!-- Soul Crystals -->
+	<element name="Whispershard Crystal" type="Item" source="Pirates" id="ID_PIRATES_ITEM_WHISPERSHARD_CRYSTAL">
+		<description>
+			<p>Appearance: Matte smoked glass, streaked with silvery violet. The surface never seems completely still, as if mist were moving within it. </p>
+			<p>Function: Street illumination and passive surveillance </p>
+			<p>Power Source: Absorbs ambient whispers of envy and discontent  (also illumination) </p>
+			<p>Quirk: Glows brighter the more jealousy is present nearby.  </p>
+			<p>Hidden Effect: Records emotional "echoes" that seers can later extract and interpret.  </p>
+			<p>Special feature on the counter: Flickers gently as soon as customers approach—more intensely when they compare themselves or eye each other with envy. </p>
+		</description>
+		<setters>
+			<set name="category">Treasure</set>
+			<set name="cost" currency="gp">1</set>
+			<set name="stackable">true</set>
+			<set name="valuable">true</set>
+			<set name="rarity">Common</set>
+		</setters>
+	</element>
+	<element name="Fauxlight Crystal" type="Item" source="Pirates" id="ID_PIRATES_ITEM_FAUXLIGHT_CRYSTAL">
+		<description>
+			<p><!--NOT IMPLEMENTED--></p>
+		</description>
+		<setters>
+			<set name="category">Treasure</set>
+			<set name="cost" currency="gp">5</set>
+			<set name="stackable">true</set>
+			<set name="valuable">true</set>
+			<set name="rarity">Uncommon</set>
+		</setters>
+	</element>
+	<element name="Grudgeglass Crystal" type="Item" source="Pirates" id="ID_PIRATES_ITEM_GRUDGEGLASS_CRYSTAL">
+		<description>
+			<p>Appearance: Deep red glass with dark veins—some like ink stains, others like cracks.</p>
+			<p>Function: Magical barriers, wards, and alarms</p>
+			<p>Power Source: Anchored to unresolved grudges sealed into contracts or blood-oaths</p>
+			<p>Quirk: Cracks and shatters when a connected soul breaks a bargain or oath</p>
+			<p>Hidden Effect: Weapons: Can be bound to a person’s name to act as a long-range tether for tracking. (huntersmark) shield spell for armour. </p>
+			<p>Special feature on the counter: The crystals pulsate slightly when a customer who has ever broken a vow stands in front of them. When a promise is broken, they crack audibly. </p>
+		</description>
+		<setters>
+			<set name="keywords">soul crystal</set>
+			<set name="category">Treasure</set>
+			<set name="cost" currency="gp">5</set>
+			<set name="stackable">true</set>
+			<set name="valuable">true</set>
+			<set name="rarity">Rare</set>
+		</setters>
+	</element>
+	<element name="Verdict Crystal" type="Item" source="Pirates" id="ID_PIRATES_ITEM_VERDICT_CRYSTAL">
+		<description>
+			<p>
+				<!--NOT IMPLEMENTED-->
+			</p>
+		</description>
+		<setters>
+			<set name="category">Treasure</set>
+			<set name="cost" currency="gp">5</set>
+			<set name="stackable">true</set>
+			<set name="valuable">true</set>
+			<set name="rarity">Rare</set>
+		</setters>
+	</element>
+	<element name="Mirrorvein Crystal" type="Item" source="Pirates" id="ID_PIRATES_ITEM_MIRRORVEIN_CRYSTAL">
+		<description>
+			<p>
+				<!--NOT IMPLEMENTED-->
+			</p>
+		</description>
+		<setters>
+			<set name="category">Treasure</set>
+			<set name="cost" currency="gp">5</set>
+			<set name="stackable">true</set>
+			<set name="valuable">true</set>
+			<set name="rarity">Rare</set>
+		</setters>
+	</element>
+	<element name="Soulwick Crystal" type="Item" source="Pirates" id="ID_PIRATES_ITEM_SOULWICK_CRYSTAL">
+		<description>
+			<p>
+				<!--NOT IMPLEMENTED-->
+			</p>
+		</description>
+		<setters>
+			<set name="category">Treasure</set>
+			<set name="cost" currency="gp">5</set>
+			<set name="stackable">true</set>
+			<set name="valuable">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
+	<element name="Crownflare Crystal" type="Item" source="Pirates" id="ID_PIRATES_ITEM_CROWNFLARE_CRYSTAL">
+		<description>
+			<p>
+				<!--NOT IMPLEMENTED-->
+			</p>
+		</description>
+		<setters>
+			<set name="category">Treasure</set>
+			<set name="cost" currency="gp">5</set>
+			<set name="stackable">true</set>
+			<set name="valuable">true</set>
+			<set name="rarity">Very Rare</set>
+		</setters>
+	</element>
+	<element name="Envycore Crystal" type="Item" source="Pirates" id="ID_PIRATES_ITEM_ENVYCORE_CRYSTAL">
+		<description>
+			<p>
+				<!--NOT IMPLEMENTED-->
+			</p>
+		</description>
+		<setters>
+			<set name="category">Treasure</set>
+			<set name="cost" currency="gp">50000</set>
+			<set name="rarity">Legendary</set>
+			<set name="stackable">true</set>
+			<set name="valuable">true</set>
+		</setters>
+	</element>
+</elements>
