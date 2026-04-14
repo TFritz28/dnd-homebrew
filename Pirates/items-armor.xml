@@ -3,7 +3,7 @@
 	<info>
 		<name>Armor</name>
 		<description>Various Armors from the Pirates campaign</description>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="items-armor.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/items-armor.xml" />
 		</update>
 	</info>
@@ -47,7 +47,16 @@
 	<!-- Pelt of the Pack Lord -->
 	<element name="Pelt of the Pack Lord" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_PELT_OF_THE_PACK_LEADER">
 		<description>
-			<p></p>
+			<p>This fur cloak was crafted from the pelt of a garmyr, carefully sewn into ratling leather, adorned with the claws of a harpy, and polished with contaminated ichor to give it a dark sheen.</p>
+			<p>As long as you are attuned to this cloak and are within 5 feet of an enemy creature, all allies near you gain Advantage on attack rolls against that creature.</p>
+			<p>
+				<b>Pacord Breath (2/Long Rest):</b>
+				As an action, you can lift the pelt, and a surge of black mist pours out from its fibers.
+				<ul>
+					<li>Demonic mist appears within a 20-foot radius for 1 minute.</li>
+					<li>Creatures that begin their turn within the mist must make a Constitution save (DC 14) or take 2d10 necrotic damage.</li>
+				</ul>
+			</p>
 		</description>
 		<setters>
 			<set name="category">Magic Armor</set>
@@ -58,6 +67,21 @@
 			<set name="armor">ID_INTERNAL_ARMOR_GROUP_LIGHT|ID_INTERNAL_ARMOR_GROUP_MEDIUM|ID_INTERNAL_ARMOR_GROUP_HEAVY</set>
 			<set name="name-format">Pelt of the Pack Lord ({{parent}})</set>
 		</setters>
+		<rules>
+			<grant type="Feat" id="ID_PIRATES_FEAT_PACORD_BREATH"/>
+		</rules>
+	</element>
+	<element name="Pacord Breath" type="Feat" source="Pirates" id="ID_PIRATES_FEAT_PACORD_BREATH">
+		<description>
+			<p>As an action, you can lift the pelt, and a surge of black mist pours out from its fibers.</p>
+			<ul>
+				<li>Demonic mist appears within a 20-foot radius for 1 minute.</li>
+				<li>Creatures that begin their turn within the mist must make a Constitution save (DC 14) or take 2d10 necrotic damage.</li>
+			</ul>
+		</description>
+		<sheet action="Action" usage="2/Long Rest">
+			<description>Demonic Mist appears in a 20-foot Emanation for 1 minute. Creatures that begin their turn within the mist must make a DC 14 Constitution saving throw or take 2d10 necrotic damage.</description>
+		</sheet>
 	</element>
 
 	<element name="Hazewalker Armor" type="Magic Item" source="Pirates" id="ID_PIRATES_MAGIC_ITEM_HAZEWALKER_ARMOR">

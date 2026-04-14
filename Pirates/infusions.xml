@@ -3,7 +3,7 @@
 	<info>
 		<name>Infusions</name>
 		<description>Infusions from the Pirates campaign</description>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="infusions.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/infusions.xml" />
 		</update>
 	</info>
@@ -34,7 +34,11 @@
 	<!--Artificer Infusions -->
 	<element name="Enhanced Defense" type="Feat Feature" source="Pirates" id="ID_PIRATES_FEAT_FEATURE_ENHANCED_DEFENSE" >
 		<supports>Artificer Infusion Armor, Artificer Infusion Shield</supports>
-		<description></description>
+		<description>
+			<p>A creature gains a +1 bonus to Armor Class while wearing (armor) or wielding (shield) the infused item.
+
+			The bonus increases to +2 when you reach 10th level in this class.</p>
+		</description>
 		<sheet display="false"/>
 		<rules>
 			<stat name="ac:misc" value="1" requirements="ID_GRANTS_INFUSED_ARMOR_EQUIPPED" />
@@ -51,7 +55,7 @@
 		</rules>
 	</element>
 	<element name="Resistant Armor" type="Feat" source="Pirates" id="ID_PIRATES_FEATS_ARMOR_OF_RESISTANCE">
-		<description></description>
+		<description>While wearing this armor, a creature has resistance to one of the following damage types, which you choose when you infuse the item: acid, cold, fire, force, lightning, necrotic, poison, psychic, radiant, or thunder.</description>
 		<sheet>
 			<description>
 			While having this armor equipped you gain resistance to the following damage types:
@@ -136,7 +140,10 @@
 	<!-- Passive Infusions -->
 	<element name="Aether Reinforcement" type="Feat Feature" source="Pirates" id="ID_PIRATES_GRANTS_AETHER_REINFORCEMENT" >
 		<supports>Passive Aether Infusion</supports>
-		<description></description>
+		<description>
+			The weapon hums with resonant energy, granting +1 to attack and damage
+			rolls. Each strike leaves faint silver trails that vanish a heartbeat later.
+		</description>
 		<sheet display="false"/>
 		<rules>
 			<stat name="ac:misc" value="1" requirements="ID_GRANTS_INFUSED_ARMOR_EQUIPPED"/>
