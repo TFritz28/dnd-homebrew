@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Companions</name>
+		<description>Companions from the Avalon campaign</description>
+		<update version="0.0.1">
+			<file name="companions.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Avalon/companions.xml" />
+		</update>
+	</info>
+	
+	<!-- Eye -->
+	<element name="Eye" type="Companion" source="Avalon" id="ID_AVALON_COMPANION_EYE">
+		<supports>Familiar, Variant Familiar</supports>
+		<description>
+			<p>Die meiste Zeit verbringt Eye in Gestalt eines Tattoos auf der Hand von Tiberius, welches mit jeder weiteren Aufgabe auf seiner Reise zu wachsen schien und sich seinen Arm hochschlängelte. Eye tritt dementsprechend meistens als stimme in Tiberius Kopf mit ihm in Kontakt und kommt nur hervor, sofern Tiberius es verlangt. Dann tritt er über die Wunde in seiner Handfläche aus und formt sich aus der dickflüssigen schwarzen Essenz, die nun statt Blut durch Tiberius Adern fließt. Eye ist eine Manifestation des Dämonischen Teils in ihm, weswegen Tiberius auch keine weiteren Merkmale eines Tieflings bis auf die Augen besitzt.</p>
+		</description>
+		<setters>
+			<set name="strength">12</set>
+			<set name="dexterity">14</set>
+			<set name="constitution">14</set>
+			<set name="intelligence">16</set>
+			<set name="wisdom">12</set>
+			<set name="charisma">14</set>
+			<set name="ac">14</set>
+			<set name="hp">10 (3d4+3)</set>
+			<set name="speed">20 ft., fly 40 ft.</set>
+			<set name="languages">Common, Infernal, Abyssal, Telepathy (Host only)</set>
+			<set name="skills">Arcana +5, History +5, Perception +3</set>
+			<set name="resistances">fire</set>
+			<set name="senses">darkvision 60 ft., passive Perception 13</set>
+			<set name="type">Fiend (Symbiont)</set>
+			<set name="size">Tiny</set>
+			<set name="alignment">lawful neutral</set>
+			<set name="challenge">1</set>
+			<set name="traits">ID_WOTC_MM_COMPANION_TRAIT_EYE_MAGIC_RESISTANCE</set>
+			<set name="actions">ID_AVALON_COMPANION_ACTION_EYE_CLAWS_BEAK,ID_AVALON_COMPANION_ACTION_EYE_STUDY_THE_ENEMY</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="14" />
+			<stat name="companion:hp:max" value="10" bonus="base" />
+			<stat name="companion:speed" value="20" bonus="base" />
+			<stat name="companion:speed:fly" value="40" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Magic Resistance" type="Companion Trait" source="Avalon" id="ID_WOTC_MM_COMPANION_TRAIT_EYE_MAGIC_RESISTANCE">
+		<description>
+			<p>Eye has advantage on saving throws against spells and other magical effects.</p>
+		</description>
+		<sheet>
+			<description>Eye has advantage on saving throws against spells and other magical effects.</description>
+		</sheet>
+	</element>
+
+	<element name="Claws/Beak" type="Companion Action" source="Avalon" id="ID_AVALON_COMPANION_ACTION_EYE_CLAWS_BEAK">
+		<description>
+			<p>Melee Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4+2) slashing damage.</p>
+		</description>
+		<sheet action="Action">
+			<description>Melee Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4+2) slashing damage.</description>
+		</sheet>
+	</element>
+
+	<element name="Study the Enemy" type="Companion Action" source="Avalon" id="ID_AVALON_COMPANION_ACTION_EYE_STUDY_THE_ENEMY">
+		<description>
+			<p>Eye observes one creature within 60 feet. The DM reveals one of the following characteristics about the creature to the player:One Damage Immunity, Resistance, or Vulnerability.</p>
+		</description>
+		<sheet action="Action">
+			<description>Eye observes one creature within 60 feet. Eye gains knowledge of one of the following characteristics about the creature:One Damage Immunity, Resistance, or Vulnerability.</description>
+		</sheet>
+	</element>
+</elements>

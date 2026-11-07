@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Wondrous Items</name>
+		<description>Wondrous Items from the Avalon campaign</description>
+		<update version="0.0.1">
+			<file name="items-wondrous.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Avalon/items-wondrous.xml" />
+		</update>
+	</info>
+
+	<element name="Bite of the Great White" type="Magic Item" source="Avalon" id="ID_AVALON_MAGIC_ITEM_BITE_OF_THE_GREAT_WHITE">
+		<description>
+			<p>
+				<b>Predators Teeth. </b>You gain a +2 bonus to attack and damage rolls you make with this weapon. 
+			</p>
+			<p>
+				<b>Shark Shot. </b>You can use an Action to shoot a magical bolt at a target you can see within range. Make a ranged spell attack against the target, on a successful hit the target takes 2d8+4 Force damage and spectral sharks appear around it. 
+				The sharks circle around the target and attempt to bite it. Make three spell attack rolls against the target. On each successful hit the target takes 2d8+4 Piercing damage. The spectral sharks disappear at the end of your turn. You can use this feature once per Long Rest.
+			</p>
+		</description>
+		<setters>
+			<set name="keywords">shortbow</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="shortbow">Weapon</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Rare</set>
+			<set name="weapon">Shortbow</set>
+			<set name="enhancement">2</set>
+			<set name="name-format">Bite of the Great White +{{enhancement}}</set>
+		</setters>
+	</element>
+
+	<element name="Bracers of the Sea Giant" type="Magic Item" source="Avalon" id="ID_AVALON_MAGIC_ITEM_BRACERS_OF_THE_SEA_GIANT">
+		<description>
+			<p>
+				<b>Flowing Waters. </b>While you are attuned to these bracers you gain a swimming speed equal to your walking speed. Additionally, you have Advantage on all Strength (Athletics) checks you make while underwater.
+			</p>
+			<p>
+				<b>Shimmering Sea. </b>These bracers hold 6 charges. You can expend any number of charges to cast the following spells as an Action. The DC for these spells is 14 or your own spell save DC, whichever is higher. The bracers regain 1d6 charges at dawn. 
+			</p>
+			<h5>
+				Shimmering Sea Spells.
+			</h5>
+			<table>
+				<thead>
+					<tr>
+						<td>Charges</td>
+						<td>Spell</td>
+					</tr>
+				</thead>
+				<tr>
+					<td>1</td>
+					<td>Create or Destroy Water</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Thunderwave</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Water Breathing</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Hypnotic Pattern</td>
+				</tr>
+			</table>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="slot">hands</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+		<rules>
+			<stat name="speed:swim" value="speed" bonus="base"/>
+			<grant type="Spell" id="ID_PHB_SPELL_CREATE_OR_DESTROY_WATER"/>
+			<grant type="Spell" id="ID_PHB_SPELL_THUNDERWAVE" requirements="!ID_PHB_SPELL_THUNDERWAVE"/>
+			<grant type="Spell" id="ID_PHB_SPELL_WATER_BREATHING"/>
+			<grant type="Spell" id="ID_PHB_SPELL_HYPNOTIC_PATTERN"/>
+		</rules>
+	</element>
+
+	<element name="Brineheart's Favorite Coat" type="Magic Item" source="Avalon" id="ID_AVALON_MAGIC_ITEM_BRINEHEARTS_FAVORITE_COAT">
+		<description>
+			<p>
+				<b>Bottom Feeder. </b>While attuned to this coat, you can breathe underwater and your movement speed is not halved when swimming. Additionally, you may expend all of your movement to ascend or descend 90 ft. in a straight vertical line underwater.
+			</p>
+			<p>
+				<b>Part of your World. </b>When you are underwater, you have Advantage on all Dexterity (Stealth) checks, as the organic parts of this coat obscure you lightly from vision.
+			</p>
+		</description>
+		<setters>
+			<set name="keywords">Swimming</set>
+			<set name="category">Magic Armor</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="light">Armor</set>
+			<set name="rarity">Rare</set>
+			<set name="armor">Studded Leather</set>
+			<set name="attunement">true</set>
+		</setters>
+		<rules>
+			<stat name="speed:swim" value="speed" bonus="base"/>
+		</rules>
+	</element>
+
+	<element name="Black-Pearl Trident" type="Magic Item" source="Avalon" id="ID_AVALON_MAGIC_ITEM_BLACK_PEARL_TRIDENT">
+		<description>
+			<p type="flavor">Carved from a single massive, black pearl, formed in the heart of an even more massive oyster, this trident is an ornate weapon perfectly adapted for aquatic combat. This weapon has also been enchanted to emulate the vicious stings of urchins and jellyfish.</p>
+			<p>
+				<b>Weapon of the Deep. </b>You gain a +1 bonus to all attack and damage rolls you make with this weapon. In addition, you do not suffer disadvantage for making attacks with this weapon while underwater.
+			</p>
+			<p>
+				<b>Ocean's Sting. </b>This weapon holds up to 6 charges. When you hit a creature with this weapon, you can expend up to three charges and deal an additional 2d6 poison damage per charge expended. The weapon regains all expended charges when you complete a Long Rest.
+			</p>
+		</description>
+		<setters>
+			<set name="keywords">trident</set>
+			<set name="category">Magic Weapons</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="type" addition="trident">Weapon</set>
+			<set name="attunement">true</set>
+			<set name="rarity">Rare</set>
+			<set name="weapon">Trident</set>
+			<set name="enhancement">1</set>
+			<set name="name-format">Black-Pearl Trident +{{enhancement}}</set>
+		</setters>
+	</element>
+
+	<element name="Gorgorath's Bone Marrow" type="Item" source="Avalon" id="ID_AVALON_WONDROUS_ITEM_GORGORATHS_BONE_MARROW">
+		<description>
+			<p class="flavor">A tough, darkly shimmering lump of bone marrow, recovered from the very core of one of the last bones of the dead Hill Giant King Gorgorath. It smells of earth, iron, and something ancient and decayed — and yet a faint, warm power pulses within it, one that has not yet completely faded away.</p>
+			<p display="false">
+				<b>Consumption. </b>As an action, a creature can eat the bone marrow. Doing so completely consumes the item. A creature can benefit from the effect of Gorgorath's bone marrow only once in its lifetime—a second piece of bone marrow has no effect on that same creature.
+			</p>
+			<p>
+				<b>Gorgorath's Tenacity. </b>The creature that has consumed the bone marrow gains permanent Resistance to Poison damage and Immunity against the Poisoned Condition.
+			</p>
+			<p>
+				<b>Omnivore's stomach. </b>The creature can permanently eat and digest any kind of food without suffering harm or discomfort—including rotten, spoiled, inedible, raw, or even normally poisonous or non-edible substances (excluding wood, leather, ash, etc.). It gains normal nourishment from each such meal.
+			</p>
+		</description>
+		<setters>
+			<set name="category">Wondrous Items</set>
+			<set name="type">Wondrous Item</set>
+			<set name="rarity">Rare</set>
+			<set name="slot">misc</set>
+		</setters>
+		<rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+		</rules>
+	</element>
+
+	<element name="Ring of the Lone Captain" type="Magic Item" source="Avalon" id="ID_AVALON_MAGIC_ITEM_RING_OF_THE_LONE_CAPTAIN">
+		<description>
+			<p>
+				<b>Enchanted Rigging. </b>While attuned to this ring, you can bond it to the rigging of a ship you are standing on. It takes 30 minutes to bond the ship to the ring. When the ring is bonded to the ship, you can adjust the sails and the steering wheel by shouting command words. You can only do so when you are within 300 ft. of the ship. When commandeering the ship in this way, it erases the need of a crew to perform these particular tasks.
+			</p>
+			<p>
+				<b>Open Fire. </b>As an Action, you can point to a target you can see within 500 ft. and speak a command word. A dark pearlescent cannonball appears in front of you and shoots towards your target. All creatures within 15 ft. of the target have to make a Dexterity saving throw (DC 15). On a failed save, they take 5d10 Force damage. On a successful save, they take half damage. The damage is doubled against structures. You can use this feature once per Long Rest.
+			</p>
+		</description>
+		<setters>
+			<set name="category">Rings</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="slot">ring</set>
+			<set name="type">Ring</set>
+			<set name="rarity">Rare</set>
+			<set name="attunement">true</set>
+		</setters>
+	</element>
+
+</elements>

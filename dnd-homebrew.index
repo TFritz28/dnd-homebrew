@@ -7,6 +7,7 @@
 		</update>
 	</info>
 	<files>
+		<!--Pirates-->
 		<file name="infusions.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/infusions.xml" />
 		<file name="items-armor.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/items-armor.xml" />
 		<file name="items-treasure.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/items-treasure.xml" />
@@ -14,5 +15,11 @@
 		<file name="items-wondrous.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/items-wondrous.xml" />
 		<file name="misc.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/misc.xml" />
 		<file name="spells.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/spells.xml" />
+		<!--Avalon-->
+		<file name="items-wondrous.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Avalon/items-wondrous.xml" />
+		<file name="companions.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Avalon/companions.xml" />
+		<file name="spells.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Avalon/spells.xml" />
+		<!--Crooked Moon-->
+		<file name="items-potions.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Crooked-Moon/items-potions.xml" />
 	</files>
 </index>

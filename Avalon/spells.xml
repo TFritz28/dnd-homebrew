@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Spells</name>
+		<description>Spells from the Avalon campaign</description>
+		<update version="0.0.1">
+			<file name="spells.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Avalon/spells.xml" />
+		</update>
+	</info>
+	
+	<element name="Judgement" type="Spell" source="Avalon" id="ID_AVALON_SPELL_JUDGEMENT">
+		<supports>Cleric, Paladin, Sorcerer, Wizard</supports>
+		<description>
+			<p>Mark a target you can see within 30 feet for heavenly judgement. Until the spell ends, or until the effect of this spell is used 6 times, every successful attack against the target summons a sword of light that pierces them, dealing 1d8 Radiant damage.</p>
+			<p>
+				<b>
+					<i>At Higher Levels.</i>
+				</b> When you cast this spell using a spell slot of 4th level or higher, the maximum number of swords is increased by 3 for each slot level above 3rd.</p>
+		</description>
+		<setters>
+			<set name="keywords"></set>
+			<set name="level">3</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Concentration, up to 1 minute</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">true</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+</elements>
