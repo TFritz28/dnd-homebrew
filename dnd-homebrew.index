@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Homebrew</name>
-		<update version="1.0.0">
+		<update version="1.0.1">
 			<file name="dnd-homebrew.index" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/dnd-homebrew.index" />
 		</update>
 	</info>
