@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<index>
+	<info>
+		<name>Pirates</name>
+		<update version="1.0.2">
+			<file name="pirates.index" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/pirates.index" />
+		</update>
+	</info>
+	<files>
+		<!--Pirates-->
+		<file name="infusions.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/infusions.xml" />
+		<file name="items-armor.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/items-armor.xml" />
+		<file name="items-treasure.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/items-treasure.xml" />
+		<file name="items-weapons.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/items-weapons.xml" />
+		<file name="items-wondrous.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/items-wondrous.xml" />
+		<file name="misc.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/misc.xml" />
+		<file name="spells.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Pirates/spells.xml" />
+	</files>
+</index>

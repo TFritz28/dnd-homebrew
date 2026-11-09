@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<index>
+	<info>
+		<name>Avalon</name>
+		<update version="1.0.2">
+			<file name="avalon.index" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Avalon/avalon.index" />
+		</update>
+	</info>
+	<files>
+		<!--Avalon-->
+		<file name="items-wondrous.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Avalon/items-wondrous.xml" />
+		<file name="companions.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Avalon/companions.xml" />
+		<file name="spells.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Avalon/spells.xml" />
+	</files>
+</index>

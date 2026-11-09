@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<index>
+	<info>
+		<name>Crooked Moon</name>
+		<update version="1.0.2">
+			<file name="crooked-moon.index" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Crooked-Moon/crooked-moon.index" />
+		</update>
+	</info>
+	<files>
+		<!--Crooked Moon-->
+		<file name="items-potions.xml" url="https://raw.githubusercontent.com/TFritz28/dnd-homebrew/master/Crooked-Moon/items-potions.xml" />
+	</files>
+</index>
